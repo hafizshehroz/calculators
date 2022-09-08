@@ -1,0 +1,1355 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" integrity="sha512-NWCafukXClS6fKch6bSMl/WvPzZrD1OGMf1oMAnFYXSSKZ7hgeswls+r4SdK4bFJauVwmvFf7HlMwji2TsjROA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .hentry {
+    margin: 0;
+    padding: 0;
+}
+.entry-content{
+    max-width: 100%;
+    margin: 0;
+}
+
+.clc-wrapper-field{
+    width: 86%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.clc-wrapper-field *{
+    font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
+}
+.clc-container{
+    width: 100%;
+    box-sizing: border-box;
+}
+.clc-section-field,
+.vertical-center{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+.clc-input-field,
+.clc-result-field{
+    width: 46%;
+    box-sizing: border-box;
+}
+
+.clc-heading-field h2{
+    color: #312257;
+    font-size: 45px;
+    margin: 12px 0;
+    text-align: left;
+    line-height: 50px;
+}
+.clc-heading-field p{
+    color: #312257;
+    line-height: 24px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+}
+.clc-form-sec h5{
+    color: #5B767B;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 0;
+}
+.clc-form-lower-button .clc-a-button{
+    width: 48%;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #5B767B;
+    background: #5B767B;
+    border-radius: 5px;
+    padding: 15px;
+}
+.clc-form-lower-button .clc-a-button:hover{
+    cursor: pointer;
+    color: #5B767B;
+}   
+.clc-form-input-section{
+    width: 100%;
+}
+.clc-sec{
+    width: 48%;
+}
+.clc-lable label{
+    display: inline-flex;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1D2138;
+    align-items: center;
+    margin: 5px 0 3px 0;
+}
+.clc-input{
+    display: flex;
+    align-items: center;
+}
+.clc-input .a-input{ 
+    width: 100%;
+    border: 1px solid #A1A1A8;
+    border-radius: 0 8px 8px 0;
+    padding: 9.5px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    border-left: none;
+    height: 48px;
+    font-weight: bold;
+}
+.clc-input .down-pay-input{
+    border-right: none;
+    border-radius: 0px;
+}
+.clc-input .down-per-input{
+    width: 70px;
+    border-radius: 0px!important;
+}
+.prepend-input-sec .a-input{
+    border-left: none !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+.pre-span + input{
+    padding-left: 0 !important;
+}
+.pre-span,
+.append-span{
+    font-weight: 500;
+}
+.clc-input .append-input{
+    border: 1px solid #A1A1A8;
+    border-right: none;
+    border-radius: 8px 0 0 8px ;
+}
+.clc-input .a-input:focus{
+    border: 1px solid #A1A1A8;
+    border-left: none;
+    color: #000;
+    outline: none;
+}
+.clc-input .append-input:focus{
+    border: 1px solid #A1A1A8;
+    border-right: none;
+    outline: none;
+    color: #000;
+}
+.clc-input .pre-span{
+    height: 48px;
+    box-sizing: border-box;
+    font-size: 22px;
+    color: #5B767B;
+    border: 1px solid #A1A1A8;
+    padding: 6px 7px;
+    border-radius: 8px 0 0 8px ;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.clc-input .append-span{
+    height: 48px;
+    box-sizing: border-box;
+    color: #5B767B;
+    font-size: 22px;
+    border: 1px solid #A1A1A8;
+    padding: 6px 7px;
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+    height: 48px;
+    box-sizing: border-box;
+}
+.clc-select .a-select{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    border: 1px solid #A1A1A8;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+}
+.clc-select .a-select:focus{
+    outline: none;
+}
+.clc-btn-sec .a-btn{
+    text-align: left;
+    padding: 0;
+    font-size: 18px;
+    text-decoration: underline;
+    background: none;
+    color: #9891AB;
+    cursor: pointer;
+    border: none;
+    margin: 5px 0;
+}
+.advance-input{
+    width: 30%;
+}
+.advInp{
+    width: 48%;
+}
+.advance-input .a-input{
+    border-left: none;
+    border-radius: 0;
+    height: 48px;
+}
+.advance-input .a-input:focus{
+    border: 1px solid #A1A1A8;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    color: #000;
+}
+.advance-input .append-span{
+    padding: 10px 5px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #5B767B;
+    height: 48px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.advance-input .per-sign{
+    font-size: 20px;
+    color: #5B767B;
+    padding: 8px 12px;
+    font-weight: 500;
+}
+.clc-value{
+    margin-top: 50px;
+}
+.fitty .clc-val-heading{
+    color: #5B767B;
+    font-size: 14px;
+}
+.fitty .clc-val-res{
+    color: #24154B;
+    font-size: 55px;
+    font-weight: bold;
+}
+.is-green .clc-val-res{
+    color: #11DB9C;
+}
+.clc-res-sec{
+    align-items: center;
+}
+.clc-slider-sec{
+    padding-top: 20px;
+}
+.clc-slider-sec label{
+    color: #24154B;
+    font-size: 18px;
+}
+.clc-img{
+    width: 48%;
+    position: relative;
+}
+.clc-img .back-img{
+    max-width: 260px;
+}
+.clc-img .a-home-img{
+    position: absolute;
+    width: 250px;
+    height: 120px;
+    top: 65px;
+    padding-left: 15px;
+    left: 0;
+}
+.clc-res{
+    background: white;
+    z-index: 2;
+    padding: 20px 0;
+    min-width: 50%;
+    margin-left: 3rem;
+}
+.clc-res-field{
+    float: right;
+}
+.clc-res h4{
+    margin: 22px 0 10px 0px;
+    font-size: 28px;
+    color: #1D2138;
+    line-height: 30px;
+}
+.clc-val .clc-val-heading{
+    font-size: 18px;
+    color: #5B767B;
+    line-height: 1;
+    margin-top: 15px;
+
+
+}
+.clc-res .clc-val .clc-val-res{
+    font-size: 32px;
+    font-weight: 600;
+}
+.advance-input .a-percent-sign{
+    color: #5B767B;
+    font-size: 22px;
+    padding: 6px;
+}
+.advance-field{
+    display: none;
+}
+
+/* ///////----tab----//////// */
+.tabset > input[type="radio"] {
+    position: absolute;
+    left: -200vw;
+}
+  
+.tabset .tab-panel {
+    display: none;
+}
+  
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+    display: block;
+}
+  
+  /*
+   Styling
+  */
+.tabset > label {
+    position: relative;
+    display: inline-flex;
+    padding: 15px 15px 10px;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #A1A1A8;
+}
+  
+.tabset > label::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 1px;
+    width: 73%;
+    height: 6px;
+}
+.tabset > label:nth-child(2)::after{
+    width: 75%;
+
+}
+
+.tabset > input:focus + label {
+    color: #000;
+}
+  
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+    background: #5B767B;
+}
+  
+.tabset > input:checked + label {
+    border-bottom: 1px solid #fff;
+}
+  
+.tab-panel {
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+} 
+.tabset {
+    max-width: 65em;
+    margin-top: 25px;
+}
+.tab-panels{
+    width: 100%;
+}
+.a-pageSection__paymentBreakdown h3{
+    margin: 10px 0 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    color: #312257;
+}
+.a-breakdown_row{
+    display: flex;
+    margin-bottom: 20px;
+}
+.a-breakdown_row span{
+    padding: 10px;
+    
+}
+.a-breakdown-lineItem{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #EFEBFA;
+    padding: 5px 15px
+}
+.a-breakdown-lineItem .a-breakdown-item{
+    font-size: 16px;
+    color: #1D2138;
+    font-weight: 600;
+
+}
+.chd-hasTooltip{ 
+    cursor: pointer;
+    font-size: 13px;
+    border: 1px solid #A6A6AD;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #A6A6AD;
+    margin: 0 3px;
+    margin-left: 10px;
+    padding: 1px 0 0 0px;
+}
+.chd-hasTooltip:hover + .chd-tooltip,
+.chd-hasTooltip:focus + .chd-tooltip,
+.chd-hasTooltip.hover + .chd-tooltip {
+    opacity: 1;
+    /* transform: translate(-50%, -100%) scale(1) rotate(0deg); */
+}
+.chd-tooltip {
+    display: block;
+    position: absolute;
+    /* top: 250px; */
+    left: 0px;
+    /* transform: translate(-50%, -50%) scale(0.75) rotate(5deg); */
+    /* transform-origin: bottom center; */
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    color: white;
+    transition: 0.15s ease-in-out;
+    opacity: 0;
+    width: 17em;
+    pointer-events: none;
+    z-index: 5;
+    text-align: left;
+    padding: 20px;
+    font-size: 13px
+}
+.chd-tooltip {
+    background: #EFEBFA;
+    color: #212121;
+}
+.clc-tab-sec .chd-tooltip {
+    /* top: 113px; */
+}
+.clc-lable .chd-tooltip {
+    /* top: 148px;
+    left: 50px; */
+}
+.advance-input .chd-tooltip {
+    /* top: 213px;
+    left: 50px; */
+}
+.chd-tooltip p {
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+.chd-tooltip:hover {
+    opacity: 1;
+    /* transform: translate(-50%, -100%) scale(1) rotate(0deg); */
+    pointer-events: inherit;
+}
+.chd-tooltip:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    transform: translate(-50%, 100%);
+}
+.chd-toltipField {
+    position: relative;
+    padding: 0px 0px;
+} 
+.a-breakevenGraph{
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    padding-top: 80px;
+}
+.a-brakeventGraph__totalSaving{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+.a-brakeventGraph__heading label{
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    color: #9e9da3;
+}
+.a-brakeventGraph__heading .chd-tooltip {
+    top: 128px;
+    left: -84px;
+}
+.a-brakeventGraph__val{
+    font-size: 24px;
+    font-weight: 600;
+    color: #5B767B;
+    line-height: 18px;
+}
+.a-breakevenGraph__barRow{
+    display: flex;
+}
+.a-breakevenGraph__barWrapper,
+.a-downevenGraph__barWrapper{
+    width: 100%;
+    position: relative;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 10rem;
+    margin-bottom: .625rem;
+}
+.a-downevenGraph__barWrapper{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.a-breakevenGraph__sliderWrapper .slider{
+    width: 100%;
+}
+.a-breakevenGraph__barWrapper__bar{
+    width: 50px;
+    height: 100px;
+    background-color: #F42F5E;
+    opacity: .25;
+    margin-right: 5px;
+}
+.a-breakevenGraph__barWrapper__bar:last-child{
+    margin-right: 0px;
+
+}
+.a-breakevenGraph__barWrapper__spacer{
+    min-width: 10px;
+}
+.m-according__group{
+    width: 100%;
+}
+.m-according__group .vertical-center{
+    align-items: center;
+}
+.m-according__btn{
+    width: 100%;
+    color: #24154B;
+    font-size: 22px;
+    font-weight: 600;
+    background: #F0F0F0;
+    
+}
+.m-according__btn:hover{
+    background: #F0F0F0;
+
+}
+.m-according__group-res span{
+    margin-right: 20px;
+}
+.m-according__group li{
+    list-style: none;
+}
+.m-according__group-res i{
+    color: #A3A3A3;  
+}
+.m-according__group .open i.fa-angle-down{
+    transform: rotate(180deg);  
+
+}
+.m-according__group .chd-tooltip {
+    top: 122px;
+}
+.o-refinanceCalculator__cashSavingsTable{
+    padding: .75em 1.5em;
+    margin: 0;
+    padding-bottom: 0;
+}
+.o-refinanceCalculator__cashSavingsTable tr td{
+    font-size: 18px;
+    font-weight: 500;
+    color: #4C406C;
+    border-bottom: none;
+    padding: 2px;
+}
+.o-refinanceCalculator__cashSavingsTable tr th{
+    font-size: 20px;
+    font-weight: 600;
+    color: #1D2138;
+    border-bottom: none;
+    padding: 2px;
+
+}
+.m-according{
+    margin-bottom: 20px;
+}
+.m-according-total{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #F0F0F0;
+    padding: .50em 1.5em;
+    border-radius: 2px;
+}
+.m-according-total div{
+    color: #5B767B;
+    font-size: 22px;
+    font-weight: 600;
+}
+.a-stacked__bar{
+    width: 100%;
+    margin-top: 30px;
+    display: inline-flex;
+    height: 50px;
+    background-color: #F0F0F0;
+}
+.a-stacked__bar div{
+    height: 50px;
+}
+.transit{
+    transition: 0.5s;
+}
+
+.irs--big {
+    height: 100px;
+}
+.irs--big .irs-line {
+    height: 30px;
+    border-radius: 16px;
+    background: #EFEBFA;
+    border: #EFEBFA;
+}
+.irs--big .irs-bar {
+    height: 30px;
+    border-radius: 16px 0 0 16px;
+    background: #5b767ba7;
+    border: #000;
+}
+.irs--big .irs-handle {
+    top: 33px;
+    box-shadow: none;
+    border: #24154B;
+    background: #24154B;
+    cursor: pointer;
+}
+
+
+.irs--big .irs-handle.state_hover, .irs--big .irs-handle:hover {
+    border: #24154B;
+    background: #24154B;
+}
+.irs--big .irs-from, .irs--big .irs-to, .irs--big .irs-single {
+    top: 75px;
+    background: none;
+    color: #24154B;
+    font-size: 20px;
+    font-weight: 600;
+}
+.irs--big .irs-min, .irs--big .irs-max {
+    top: 75px;
+    background: none;
+    color: #D5D2DE;
+    font-size: 20px;
+}
+
+/* //////////////-------RESPONCIVE-WEB-DESIGN-------///////////// */
+@media only screen and (max-width: 1200px){
+    .site-branding, .menu, .site-info, .entry-header, .entry-content, .entry-meta, #nav-below.paging-navigation, #nav-below.post-navigation, .comments-area, .widget-areas-inner, .page-header {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+    .clc-section-field{
+        flex-direction: column;
+    }
+    .clc-input-field, .clc-result-field {
+        width: 100%;
+    }
+    .clc-res-sec {
+        justify-content: space-evenly;
+    }
+    .clc-img .back-img {
+        max-width: 300px;
+    }
+    .clc-img .a-home-img {
+        width: 285px;
+        top: 94px;
+        padding-left: 20px;
+        left: 0px;
+    }
+    .clc-heading-field h2 {
+        font-size: 50px;
+        margin: 25px 0;
+    }
+    .clc-input .down-per-input {
+        width: 130px;
+    }
+}
+/* @media only screen and (max-width: 992px){
+
+} */
+@media only screen and (max-width: 768px){
+   
+    .clc-res {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .clc-res .clc-val h5 {
+        font-size: 20px;
+        text-align: center ;
+    }
+    .clc-input .down-per-input {
+        width: 90px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .clc-heading-field h2 {
+        font-size: 30px;
+    }
+    .clc-form-lower-button .clc-a-button {
+        width: 100%;
+        margin: 10px;
+    }
+    .clc-section-field, .vertical-center {
+        flex-direction: column;
+    }
+    .clc-lable label {
+        display: -webkit-inline-box;
+    }
+    .clc-sec,
+    .advance-input {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .clc-img,
+    .clc-res{
+        display: none;
+    }
+    .m-according__group .vertical-center {
+        display: flex;
+        flex-direction: inherit;
+        align-items: center;
+    }
+    .fitty h5 {
+        margin-top: 0px;
+    }
+    .fitty span {
+        font-size: 36px;
+    }
+    .tabset > input:checked + label {
+        font-size: 14px;
+    }
+    .a-pageSection__paymentBreakdown h3 {
+        font-size: 22px;
+    }
+    .a-breakdown-lineItem .a-breakdown-item {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .tabset > input:checked + label {
+        font-size: 12px;
+    }
+}
+
+.calc-blue-btn{
+    color: #fff;
+    background: #5B767B;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+.calc-blue-btn:hover{
+    background: #5B767B;
+}
+.blue-loader-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+.blue-loader {
+    /* position: absolute;
+    top: 50px;
+    left: 50%; */
+    margin-left: -25px;
+    right: 0;
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #000;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 1.5s linear infinite; /* Safari */
+    animation: spin 1.5s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .blue-loader{
+      /* display: none; */
+  }
+.hide-elem{
+    display: none !important;
+}
+
+
+
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+</style>
+<div class="clc-wrapper-field">
+    <div class="clc-container">
+        <div class="blue-loader-container hide-elem">
+            <div class="blue-loader"></div>
+        </div>
+        <div class="clc-section-field ">
+            <div class="clc-input-field">
+                <div class="clc-heading-field">
+                    <h2>What is your budget?</h2>
+                    <p>Curious about how much you can afford to spend on a home? Use our calculator to get an estimate on your maximum budget.</p>
+                </div>
+                <div class="clc-form-sec">
+                    <div class="clc-form-input-section vertical-center">
+                        <div class="clc-sec advance-input">
+                            <div class="clc-lable">
+                                <label for="">Zip Code
+                                </label>
+                            </div>
+                            <div class="clc-input ">
+                                <span class="pre-span"></span>
+                                <input type="text" class="a-input append-input clcInp" id="zip-code" value="19103" maxlength="5">
+                                <span class="append-span"></span>
+                            </div>
+                        </div>
+                        <div class="clc-sec advance-input">
+                            <div class="clc-lable">
+                                <label for="">Credit Score
+                                </label>
+                            </div>
+                            <div class="clc-input ">
+                                <span class="pre-span"></span>
+                                <input type="text" class="a-input append-input clcInp comma-input" id="credit-score" value="700">
+                                <span class="append-span"></span>
+                            </div>
+                        </div>
+                        <div class="clc-sec advance-input">
+                            <div class="clc-lable">
+                                <label for="">Interest Rate
+                                    <div class="chd-toltips">
+                                        <div class='chd-toltipField'>
+                                            <div class='chd-hasTooltip chd-toltipBlue'>?</div>
+                                            <span class='chd-tooltip'>
+                                                <p>The featured interest rate is standard and subject to change depending on your credit score and other factors.</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="clc-input ">
+                                <span class="pre-span"></span>
+                                <input type="text" class="a-input append-input clcInp comma-input" id="intr-rate" value="2.75">
+                                <span class="append-span per-sign">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clc-form-input-section vertical-center prepend-input-sec">
+                        <div class="clc-sec ">
+                            <div class="clc-lable">
+                                <label for="">Down Payment</label>
+                            </div>
+                            <div class="clc-input">
+                                <span class="pre-span">$</span>
+                                <input type="text" class="a-input append-input clcInp comma-input" id="down-pay" value="50,000">
+                                <span class="append-span"></span>
+                            </div>
+                        </div>
+                        <div class="clc-sec">
+                            <div class="clc-lable">
+                            <label for="">Loan Term</label>
+                            </div>
+                            <div class="clc-select">
+                                <select name="" id="loan-term" class="a-select clcInp comma-input">
+                                    <option value="10">10 Year</option>
+                                    <option value="15">15 Year</option>
+                                    <option value="20">20 Year</option>
+                                    <option value="30" selected>30 Year</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clc-form-input-section vertical-center">
+                        <div class="clc-sec prepend-input-sec">
+                            <div class="clc-lable">
+                                <label for="">Annual Income</label>
+                            </div>
+                            <div class="clc-input">
+                                <span class="pre-span">$</span>
+                                <input type="text" class="a-input append-input clcInp comma-input" id="annul-incm" value="100,000">
+                                <span class="append-span"></span>
+                            </div>
+                        </div>
+                        <div class="clc-sec prepend-input-sec">
+                            <div class="clc-lable">
+                                <label for="">Monthly Debts</label>
+                            </div>
+                            <div class="clc-input">
+                                <span class="pre-span">$</span>
+                                <input type="text" class="a-input append-input clcInp comma-input" id="monthly-debts" value="250">
+                                <span class="append-span"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="class">
+                        <div class="clc-form-input-section vertical-center">
+                            <div class="clc-sec advInp advance-input">
+                                <div class="clc-lable">
+                                    <label for="">Property Insurance
+                                        <div class="chd-toltips">
+                                            <div class='chd-toltipField'>
+                                                <div class='chd-hasTooltip chd-toltipBlue'>?</div>
+                                                <span class='chd-tooltip'>
+                                                    <p>HOI, or homeowners insurance, is just like any other type of insurance-- it covers you when things go wrong. HOI covers any weather, theft, or injury that affects or occurs in your home.</p>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="clc-input ">
+                                    <span class="pre-span">$</span>
+                                    <input type="text" class="a-input append-input clcInp comma-input" id="propty-insr" value="500">
+                                    <span class="append-span">/year</span>
+                                </div>
+                            </div>
+                            <div class="clc-sec advInp advance-input">
+                                <div class="clc-lable">
+                                    <label for="">Property Tax
+                                        <div class="chd-toltips">
+                                            <div class='chd-toltipField'>
+                                                <div class='chd-hasTooltip chd-toltipBlue'>?</div>
+                                                <span class='chd-tooltip'>
+                                                    <p>Property tax is a fee based on the value of your property and the land it is on. The local government assesses this and sometimes considers personal assets in the tax as well.</p>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="clc-input ">
+                                    <span class="pre-span">$</span>
+                                    <input type="text" class="a-input append-input clcInp comma-input" id="propty-tax" value="4000">
+                                    <span class="append-span">/year</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clc-form-input-section vertical-center">
+                            <div class="clc-sec advInp advance-input">
+                                <div class="clc-lable">
+                                    <label for="">HOA Fees
+                                        <div class="chd-toltips">
+                                            <div class='chd-toltipField'>
+                                                <div class='chd-hasTooltip chd-toltipBlue'>?</div>
+                                                <span class='chd-tooltip'>
+                                                    <p>HOA, or homeowners association, is a coalition of people that preside over specific neighborhoods. Not all homes are within HOAs, but it is important to know if yours is and how much the fees to be apart of that neighborhood will be.</p>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="clc-input ">
+                                    <span class="pre-span">$</span>
+                                    <input type="text" class="a-input append-input clcInp comma-input" id="hoa-fee" value="50">
+                                    <span class="append-span">/month</span>
+                                </div>
+                            </div>
+                            <div class="clc-sec advInp advance-input">
+                                <div class="clc-lable">
+                                    <label for="">PMI
+                                        <div class="chd-toltips">
+                                            <div class='chd-toltipField'>
+                                                <div class='chd-hasTooltip chd-toltipBlue'>?</div>
+                                                <span class='chd-tooltip'>
+                                                    <p>PMI, or personal mortgage insurance, is a special type of insurance given to higher risk clients, so lenders have a safety net in case of default.</p>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="clc-input ">
+                                    <span class="pre-span">$</span>
+                                    <input type="text" class="a-input append-input clcInp comma-input" id="pmi" value="0">
+                                    <span class="append-span">/year</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clc-btn-sec accordion">
+                        <button class="a-btn" id="show-field" >Show Advanced Fields</button>
+                    </div>
+                </div>
+                <div class="clc-value vertical-center">
+                    <div class="clc-val fitty">
+                        <div class="clc-val-heading">Maximum Home Price</div>
+                        <div class="clc-val-res maximum-home-price">$-123</div>
+                    </div>
+                    <div class="clc-val fitty">
+                        <div class="clc-val-heading">Maximum Monthly Payment</div>
+                        <div class="clc-val-res maximum-monthly-payment">$104,053</div>
+                    </div>
+                </div>
+            </div>
+            <div class="clc-result-field">
+                <div class="clc-res-sec vertical-center">
+                    <div class="clc-img">
+                        <img class="back-img" src="https://raw.githubusercontent.com/Trevtron3000/Calculator/main/back-img.png" alt="/">
+                        <img class="a-home-img" src="https://raw.githubusercontent.com/Trevtron3000/Calculator/main/mid-home-img.svg" alt="/">
+                    </div>
+                    <div class="clc-res">
+                        <div class="clc-res-field">
+                            <div class="clc-val fitty">
+                                <div class="clc-val-heading">Maximum Home Price</div>
+                                <div class="clc-val-res maximum-home-price">$-123</div>
+                            </div>
+                            <div class="clc-val fitty">
+                                <div class="clc-val-heading">Maximum Monthly Payment</div>
+                                <div class="clc-val-res maximum-monthly-payment">$104,053</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clc-slider-sec">
+                    <label for="">Your Debt-to-Income Ratio</label>
+                    <input type="text" class="jw-slider clcInp comma-input" id="dti-slider" data-max="50"  >
+                </div>
+                <div class="clc-tab-sec">
+                    <div class="tabset">
+                        <!-- Tab 1 -->
+                         <input type="radio" name="tabset" id="tab1" aria-controls="tab__1" checked>
+                        <label for="tab1">
+                            MONTHLY BREAKDOWN
+                            <div class="chd-toltips">
+                                <div class='chd-toltipField'>
+                                    <div class='chd-hasTooltip chd-toltipBlue'>?</div>
+                                    <span class='chd-tooltip'>
+                                        <p>Monthly breakdown is calculated by combining gross income, mortgage payments, homeowner’s insurance, property tax, and insurance.</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </label>
+                          
+                        <!-- Tab 2 -->
+                        <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+                        <label for="tab2" class="tab-lable">
+                            COST
+                            <div class="chd-toltips">
+                                <div class='chd-toltipField'>
+                                    <div class='chd-hasTooltip chd-toltipBlue'>?</div>
+                                    <span class='chd-tooltip'>
+                                        <p>Costs are calculated by adding the down payment and closing costs together.</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </label>
+                        
+                        <div class="tab-panels">
+                            <section id="tab__1" class="tab-panel">
+                                <div class="a-pageSection__paymentBreakdown">
+                                    <h3>How is my monthly payment calculated?</h3>
+                                    <div class="a-breakdown_sec">
+                                        <div class="a-breakdown_row">
+                                            <span style="background: #0157FF;"></span>
+                                            <div class="a-breakdown-lineItem">
+                                                <div class="a-breakdown-item">Max Monthly Payment</div>
+                                                <div class="a-breakdown-item max-month-pay" >$1,020.60</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="a-breakdown_sec">
+                                        <div class="a-breakdown_row">
+                                            <span style="background: #A1A1A8;"></span>
+                                            <div class="a-breakdown-lineItem">
+                                                <div class="a-breakdown-item" >HOA Fees</div>
+                                                <div class="a-breakdown-item hoaFee" >$0.00</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="a-breakdown_sec">
+                                        <div class="a-breakdown_row">
+                                            <span style="background: #11DB9C;"></span>
+                                            <div class="a-breakdown-lineItem">
+                                                <div class="a-breakdown-item">Property Insurance</div>
+                                                <div class="a-breakdown-item property-insurance" >$0.00</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="a-breakdown_sec">
+                                        <div class="a-breakdown_row">
+                                            <span style="background: #4887FF;"></span>
+                                            <div class="a-breakdown-lineItem">
+                                                <div class="a-breakdown-item">Property Tax</div>
+                                                <div class="a-breakdown-item property-tax" >$0.00</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="a-breakdown_sec">
+                                        <div class="a-breakdown_row">
+                                            <span style="background: #FF74AF;"></span>
+                                            <div class="a-breakdown-lineItem">
+                                                <div class="a-breakdown-item">Insurance</div>
+                                                <div class="a-breakdown-item insurance" >$0.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="a-breakdown_sec">
+                                        <div class="a-breakdown_row">
+                                            <span style="background: #24154B;"></span>
+                                            <div class="a-breakdown-lineItem">
+                                                <div class="a-breakdown-item" style="color: #0157FF;">Total Remaining</div>
+                                                <div class="a-breakdown-item total-remaining" style="color: #0157FF;" >$0.00</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="a-stacked__bar">
+                                        <div class="transit month-per" style="background:#0157FF;"></div>
+                                        <div class="transit fees-per" style="background:#A1A1A8;"></div>
+                                        <div class="transit propty-incr" style="background:#11DB9C;"></div>
+                                        <div class="transit propty-tax" style="background:#4887FF;"></div>
+                                        <div class="transit insr" style="background:#FF74AF;"></div>
+                                    </div>
+                                </div>
+                                
+                            </section>
+                            <section id="tab__2" class="tab-panel">
+                                <div class="a-pageSection__paymentBreakdown">
+                                    <h3>How are my costs calculated?</h3>
+                                    <div class="a-breakdown_sec">
+                                        <div class="a-breakdown_row">
+                                            <span style="background: #0157FF;"></span>
+                                            <div class="a-breakdown-lineItem">
+                                                <div class="a-breakdown-item">Down Payment</div>
+                                                <div class="a-breakdown-item down-payment" >$1,020.60</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="a-breakdown_sec">
+                                        <div class="a-breakdown_row">
+                                            <span style="background: #A1A1A8;"></span>
+                                            <div class="a-breakdown-lineItem">
+                                                <div class="a-breakdown-item">Closing Costs</div>
+                                                <div class="a-breakdown-item closing-costs" >$0.00</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="a-breakdown_sec">
+                                        <div class="a-breakdown_row">
+                                            <span style="background: #24154B;"></span>
+                                            <div class="a-breakdown-lineItem">
+                                                <div class="a-breakdown-item" style="color: #0157FF;">Total</div>
+                                                <div class="a-breakdown-item total" style="color: #0157FF;" >$0.00</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </section>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js" integrity="sha512-kZsqvmw94Y8hyhwtWZJvDtobwQ9pLhF1DuIvcqSuracbRn6WJs1Ih+04fpH/8d1CFKysp7XA1tR0Aa2jKLTQUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    function addCommas(nStr) {
+	nStr += '';
+	x = nStr.split('.');
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(x1)) {
+	  x1 = x1.replace(rgx, '$1' + ',' + '$2');
+	}
+	return x1 + x2;
+}
+
+
+
+jQuery(document).ready(function($){
+    var $range = $(".jw-slider");
+    // var instance;
+    $range.ionRangeSlider({
+        skin: "big",
+        type: "single",
+        min:0,
+        from: 28,
+        postfix: '%',
+        // hide_min_max: true,
+        // hide_from_to: true
+    });
+    $($range).bind("change", function () {
+        var $this = $(this);
+        value = $this.prop("value");
+    }).trigger('change');
+
+    
+    $('.comma-input').on('input', function(e){
+		if(e.target.nodeName != 'SELECT'){
+			 var val = this.value.replace(/,/g, '')
+			 this.value = addCommas(val.replace(/[^0-9.e\,]/, ''));
+		}
+	}).trigger('input');
+    
+    $('#show-field').on('click',function(){
+        $('.class').toggleClass('advance-field');
+        if($('.class').hasClass('advance-field')){
+            $('#show-field').text('Show Advanced Fields');
+        }else{
+            $('#show-field').text('Hide Advanced Fields');
+        }
+            
+    }).trigger('click');
+    
+    $('.clcInp').on('input',function(){
+		var zipCode = +$('#zip-code').val().replace(/,/g, '');
+		var creditScore = +$('#credit-score').val().replace(/,/g, '');
+		var intrRate = +$('#intr-rate').val().replace(/,/g, '');
+		var downPay = +$('#down-pay').val().replace(/,/g, '');
+		var loanTerm = +$('#loan-term').val().replace(/,/g, '');
+		var annulIncome = +$('#annul-incm').val().replace(/,/g, '');
+		var monthlyDebts = +$('#monthly-debts').val().replace(/,/g, '');
+		var propertyInsure = +$('#propty-insr').val().replace(/,/g, '');
+		var propertyTax = +$('#propty-tax').val().replace(/,/g, '');
+		var hoaFee = +$('#hoa-fee').val().replace(/,/g, '');
+		var pmi = +$('#pmi').val().replace(/,/g, '');
+		var dti = $('#dti-slider').val();
+
+        
+
+
+        $('#zip-code-pdf').text($('#zip-code').val());
+		$('#credit-score-pdf').text($('#credit-score').val());
+		$('#intr-rate-pdf').text($('#intr-rate').val());
+		$('#down-pay-pdf').text($('#down-pay').val());
+		$('#loan-term-pdf').text($('#loan-term option:selected').text());
+		$('#annul-incm-pdf').text($('#annul-incm').val());
+		$('#monthly-debts-pdf').text($('#monthly-debts').val());
+		$('#propty-insr-pdf').text($('#propty-insr').val());
+		$('#propty-tax-pdf').text($('#propty-tax').val());
+		$('#hoa-fee-pdf').text($('#hoa-fee').val());
+		$('#pmi-pdf').text($('#pmi').val());
+
+        var monthlyHoi = propertyInsure / 12;
+        var monthlyPMI = pmi / 12;
+        var monthlyPropertyTax = propertyTax / 12;
+        var totalMonthlyCosts = monthlyHoi + monthlyPMI + monthlyPropertyTax + hoaFee;
+        var maximum_monthly_payment = dti / 100 * (annulIncome / 12) - monthlyDebts;
+        // console.log(monthlyHoi)
+        var rate = intrRate / 100 / 12;
+        var loanPeriods = loanTerm * 12;
+        var payment = (maximum_monthly_payment - totalMonthlyCosts);
+        var maximum_home_price = 0;
+        if (intrRate === 0) {
+            maximum_home_price = -payment * loanPeriods;
+        } else {
+            maximum_home_price = (((1 - Math.pow(1 + rate, loanPeriods)) / rate * payment * (1 + rate * 0) ) / Math.pow(1 + rate, loanPeriods));
+        }
+        var maximumHomePrice = Math.abs(maximum_home_price - downPay);
+        var totalRemaining = maximum_monthly_payment - (hoaFee + monthlyHoi + monthlyPropertyTax + monthlyPMI ) ; 
+        var closingCosts = 0;
+        var total = closingCosts + downPay;
+        var totalCost = maximum_monthly_payment + hoaFee + monthlyHoi + monthlyPropertyTax + monthlyPMI;
+        var monthPer = maximum_monthly_payment * 100 / totalCost;
+        var feesPer  = hoaFee * 100 / totalCost;
+        var propty_insure  = monthlyHoi * 100 / totalCost;
+        var propty_tax  = monthlyPropertyTax * 100 / totalCost;
+        var insure  = monthlyPMI * 100 / totalCost;
+
+		$('.maximum-home-price').text('$'+addCommas(maximumHomePrice.toFixed(0)));
+		$('.maximum-monthly-payment').text('$'+addCommas(maximum_monthly_payment.toFixed(0)));
+		$('.max-month-pay').text('$'+addCommas(maximum_monthly_payment.toFixed(2)));
+		$('.hoaFee').text('$'+addCommas(hoaFee.toFixed(0)));
+		$('.property-insurance').text('$'+addCommas(monthlyHoi.toFixed(2)));
+		$('.property-tax').text('$'+addCommas(monthlyPropertyTax.toFixed(2)));
+		$('.insurance').text('$'+addCommas(monthlyPMI.toFixed(2)));
+		$('.total-remaining').text('$'+addCommas(totalRemaining.toFixed(2)));
+		$('.down-payment').text('$'+addCommas(downPay.toFixed(2)));
+		$('.closing-costs').text('$'+addCommas(closingCosts.toFixed(2)));
+		$('.total').text('$'+addCommas(total.toFixed(2)));
+        $('.month-per').width(monthPer+"%");
+        $('.fees-per').width(feesPer+"%");
+        $('.propty-incr').width(propty_insure+"%");
+        $('.propty-tax').width(propty_tax+"%");
+        $('.insr').width(insure+"%");
+
+
+    }).trigger('input');
+    var path = 'https://raw.githubusercontent.com/Trevtron3000/Calculator/main/';
+    $('.jw-slider').on('input',function(){
+        var dti = $('#dti-slider').val();
+
+        var imgSrc = dti < 16 ?'home-img.svg':(dti <= 30?'mid-home-img.svg':(dti >= 31 ?'larg-home-img.svg':''));
+		// $('.clc-img > .a-home-img').animate({left: '250px',right:'250px'});
+        $('.clc-img > .a-home-img').attr('src' , path+imgSrc)
+        // $('.clc-img > .a-home-img').attr('src' ,'img/'+imgSrc)
+
+    })
+
+
+    
+
+})
+window.addEventListener('scroll', () => {
+    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+});
+</script>
+
