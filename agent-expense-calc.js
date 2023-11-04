@@ -43,7 +43,7 @@ jQuery(document).ready(function(){
         let amt = +document.getElementById(id+'Amount').value.replace(/,/g, '')
         return opt=='yes'?amt:0;
     }
-    $('.calc-input').on('input',function(){
+    $('.ci').on('input',function(){
         var id = this.id;
         let obj = {}
         var payPercentage = +$('#payPercentage').val();
@@ -161,14 +161,14 @@ jQuery(document).ready(function(){
     })
     $('#payPercentage').trigger('input')
     $('#step1-btn').on('click', function(){
-        $('#step1').addClass('calc-hidden', function(){
+        $('#step1').addClass('e_hidden', function(){
         });
-        $('#step2').removeClass('calc-hidden');
+        $('#step2').removeClass('e_hidden');
     })
     $('#step2-btn').on('click', function(){
-        $('#step2').addClass('calc-hidden', function(){
+        $('#step2').addClass('e_hidden', function(){
         });
-        $('#step1').removeClass('calc-hidden');
+        $('#step1').removeClass('e_hidden');
     })
     // $('#first-toggle-btn').on('click',function(){
     //     if(this.checked){
@@ -182,4 +182,3 @@ jQuery(document).ready(function(){
         $(this).next().toggleClass('active-tooltip')
     })
 })
-
