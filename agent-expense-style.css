@@ -1,4 +1,5 @@
-body {
+
+    body {
     padding: 0;
     margin: 0;
 }
@@ -6,18 +7,18 @@ body {
     box-sizing: border-box;
 }
 
-.agent-calc-wrapper {
+.ac-wrapper {
 
     background-color: black;
     padding: 20px 30px;
 }
 
-.agent-calc-contenair {
+.ac-contenair {
     width: 80%;
     margin: 0 auto;
 }
 
-.agent-expense-calc {
+.ae-calc {
     width: 100%;
     font-family: sans-serif;
 
@@ -25,7 +26,7 @@ body {
     padding: 0px 30px;
 }
 
-.calc-contant-sec {
+.e_contant-sec {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -44,7 +45,7 @@ body {
     width: 50%;
 }
 
-.calc-heading {
+.e_heading {
     font-size: 25px;
 }
 
@@ -54,26 +55,26 @@ body {
     color: #bbbaba;
 }
 
-.calc-inp-sec {
+._c-sec {
     /* position: relative; */
     width: 45%;
     box-sizing: border-box;
 }
-/* .calc-inp-sec2{
+/* ._c-sec2{
     position: absolute;
 } */
 
-.calc-inp {
+._c {
     width: 100%;
 }
 
-.calc-inp label {
+._c label {
     display: block;
     padding: 10px 0;
     font-size: 14px;
 }
 
-.calc-inp input {
+._c input {
     width: 100%;
     height: 30px;
     background: transparent;
@@ -83,7 +84,7 @@ body {
     color: #A3A3A3;
 }
 
-.calc-select {
+.e_select {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -91,24 +92,24 @@ body {
     align-items: flex-end;
 }
 
-.calc-select label {
+.e_select label {
     display: block;
     padding: 10px 0;
     font-size: 13px;
 }
 
-.calc-select .calc-sele {
+.e_select .e_sele {
     width: 50%;
     padding-right: 20px;
 }
 
-.calc-select select {
+.e_select select {
     width: 100%;
     height: 30px;
     border: none;
 }
 
-.calc-select select {
+.e_select select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -126,15 +127,15 @@ body {
     outline: none;
 }
 
-.calc-select select option {
+.e_select select option {
     color: #000 !important
 }
 
-.calc-select .calc-inp {
+.e_select ._c {
     width: 70%;
 }
 
-.calc-select .calc-inp input {
+.e_select ._c input {
     width: 100%;
     height: 30px;
     background: transparent;
@@ -143,7 +144,7 @@ body {
     outline: 0;
 }
 
-.calc-res-sec {
+.e_res-sec {
     position: relative;
     width: 45%;
     /* height: auto; */
@@ -160,11 +161,11 @@ body {
     overflow: hidden;
 }
 
-.calc-res-sec::before {
+.e_res-sec::before {
     content: '';
     width: 100%;
     height: 330px;
-    background: url(../images/Vector.png);
+    background: url(https://raw.githubusercontent.com/hafizshehroz/calculators/c94ff2456f689423b04d08c82f6ad982f0c705dc/Vector.png);
     background-position: right;
     background-size: cover;
     position: absolute;
@@ -173,7 +174,7 @@ body {
 
 }
 
-.calc-btn {
+.e_btn {
     float: right;
     margin-top: 30px;
     width: 70px;
@@ -182,7 +183,7 @@ body {
     cursor: pointer;
 
 }
-.calc-hidden{
+.e_hidden{
     display: none;
 }
 
@@ -199,7 +200,7 @@ body {
     font-size: 20px;
 }
 
-.calc-row {
+.e_row {
     display: flex;
     justify-content: space-between;
 
@@ -215,7 +216,7 @@ body {
     font-family: sans-serif;
 }
 
-.calc-row .sum-res .total-hours {
+.e_row .sum-res .total-hours {
     font-size: 20px;
 }
 
@@ -292,33 +293,33 @@ body {
 }
 
 @media only screen and (max-width: 992px) {
-    .agent-calc-contenair {
+    .ac-contenair {
         width: 100%;
     }
 }
 @media only screen and (max-width: 812px) {
-    .agent-calc-wrapper {
+    .ac-wrapper {
         background-color: black;
         padding: 20px 10px;
     }
-    .agent-expense-calc {
+    .ae-calc {
         width: 100%;
         padding: 0px;
     }
-    .calc-inp-sec,
-    .calc-res-sec{
+    ._c-sec,
+    .e_res-sec{
         width: 48%;
     }
 }
 @media only screen and (max-width: 768px) {
-    .agent-calc-contenair {
+    .ac-contenair {
         width: 100%;
     }
-    .calc-contant-sec{
+    .e_contant-sec{
         flex-direction: column;
     }
-    .calc-inp-sec,
-    .calc-res-sec{
+    ._c-sec,
+    .e_res-sec{
         width: 100%;
         margin: 10px 0;
     }
